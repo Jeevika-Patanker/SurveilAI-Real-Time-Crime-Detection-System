@@ -1,100 +1,89 @@
-SurveilAI – Real-Time Crime Detection System
+# SurveilAI – Real-Time Crime Detection System
 
-SurveilAI is a real-time video surveillance web application that uses machine learning and computer vision to detect suspicious or criminal activities from live video feeds. The system is designed to assist organizations in proactive monitoring by generating alerts and maintaining incident logs for further analysis.
+SurveilAI is a real-time video surveillance web application that leverages machine learning and computer vision to detect suspicious or criminal activities from live video feeds. The system is designed to assist organizations in proactive monitoring by generating alerts and maintaining detailed incident logs for further analysis.
 
-This project was developed as a college group project, with collaborative design and implementation across backend, machine learning, and system integration components.
+This project was developed as a college group project, with collaborative efforts across system design, backend development, and machine learning components.
 
-Key Features
+## Key Features
+- Real-time video feed processing  
+- Machine learning–based activity detection  
+- Alert generation for detected incidents  
+- Incident logging for monitoring and reporting  
+- Web-based interface for system interaction  
 
-Real-time video feed processing for activity detection
+## Tech Stack
+- Backend: Python, Flask  
+- Machine Learning & Computer Vision: OpenCV, ML models  
+- Database: MongoDB  
+- Frontend: HTML, CSS, JavaScript  
+- Version Control: Git, GitHub  
 
-Machine learning–based analysis of video frames
-
-Alert notification system for detected incidents
-
-Incident logging for monitoring and reporting
-
-Web-based dashboard for system interaction
-
-Tech Stack
-
-Backend: Python, Flask
-
-Machine Learning & CV: OpenCV, ML models
-
-Database: MongoDB
-
-Frontend: HTML, CSS, JavaScript
-
-Other Tools: Git, REST APIs
-
-My Contribution
-
-As part of the development team, I primarily worked on:
-
-Designing and implementing the machine learning pipeline for video frame analysis
-
-Integrating real-time detection logic with the backend
-
-Implementing incident logging and alert-trigger mechanisms
-
-Assisting in system integration and testing
-
-Project Status
-
-This project is currently under active development.
-
-Core detection and logging features are functional
-
-Email notification integration and model accuracy improvements are ongoing
-
-Current model accuracy is approximately 72%, with plans for further optimization
-
-Steps to Run the Project
-1. Clone the Repository
-git clone https://github.com/prathmesh-27/SurveilAI
-cd SurveilAI
-
-2. Configure MongoDB
-
-Open config.py and update the MongoDB URI:
-
-MONGO_URI = os.getenv('MONGO_URI', '#your_mongo_URI')
+## My Contribution
+As part of the project team, my primary responsibilities included:
+- Designing and implementing the machine learning pipeline for video frame analysis  
+- Integrating real-time detection logic with the backend  
+- Implementing incident logging and alert-trigger mechanisms  
+- Assisting in system integration and testing  
 
 
-Ensure the database contains the following collections:
+## **Steps to Run the Project**
 
-Camera
+### 1. **Clone the Repository**  
+```bash
+   git clone https://github.com/prathmesh-27/SurveilAI
+   cd SurveilAI
+```
 
-Organization
+### 2. **Update the MongoDB URI**  
+Open config.py
+ 
+Replace the placeholder MongoDB URI with your MongoDB Atlas URI:
 
-Payment
+```bash    
+    MONGO_URI = os.getenv('MONGO_URI', '#your_mongo_URI')
+  ```
+   Ensure your MongoDB database has the following collections:
+   
+ * Camera
+   
+ * Organization
+   
+ * Payment
 
-3. Set Email Credentials
+### 3. ***Set Email Credentials***
+* In the config.py file, configure your email and Google-generated app password for sending notifications:
+```
+    MAIL_USERNAME = os.getenv('EMAIL_USER', '# Your email address')  
+    MAIL_PASSWORD = os.getenv('EMAIL_PASS', '# Your app password generated from Google')   
+```
+### 4. Install Dependencies
+Install the required Python packages listed in the requirements.txt file:
 
-In config.py, configure email credentials for notifications:
-
-MAIL_USERNAME = os.getenv('EMAIL_USER', '# your email address')
-MAIL_PASSWORD = os.getenv('EMAIL_PASS', '# your Google app password')
-
-4. Install Dependencies
+```bash
 pip install -r requirements.txt
-
-5. Activate Virtual Environment (Optional)
+```
+### 5. Activate the Virtual Environment
+If you're using a virtual environment, activate it:
 
 On Windows:
-
+```bash
 venv\Scripts\activate
+```
+### 6. Run the Application
+Start the Flask application:
 
-6. Run the Application
+```
 python run.py
+```
 
-7. Access the Application
-
-Open your browser and go to:
-
+### 7. Access the Application
+Open your browser and navigate to:
+```
 http://127.0.0.1:5000/
-
-8. Create an Account
-
-Register using the application’s registration page before accessing features.
+```
+### 8. Create an Account
+* Before using the application, register an account through the registration page.
+* Follow the on-screen instructions to complete the process.
+  
+## Disclaimer
+This project was developed for academic and learning purposes as part of a college group project.
